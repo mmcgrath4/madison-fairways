@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// W2 will use rankPosition + bucket for pairwise ranking of played courses.
+enum RankBucket {
+  liked
+  fine
+  didnt_like
+}
+
+model PlayedCourse {
+  id           String      @id @default(cuid())
+  userId       String      @map("user_id")
+  courseId     String      @map("course_id")
+  playedAt     DateTime    @default(now()) @map("played_at")
+  rankPosition Int?        @map("rank_position")
+  bucket       RankBucket?
+
+  @@unique([userId, courseId])
+  @@index([userId])
+  @@map("played_courses")
+}
