@@ -54,9 +54,9 @@ export default async function Home({
         <div className="flex flex-wrap items-end justify-between gap-2">
           <h2 className="font-display text-2xl">Courses</h2>
           <p className="text-sm text-[var(--muted)]">
-            {results.total.toLocaleString()} match
-            {results.total === 1 ? "" : "es"} · {courseCount.toLocaleString()}{" "}
-            US courses in the seed
+            {results.total.toLocaleString()}{" "}
+            {results.total === 1 ? "match" : "matches"} ·{" "}
+            {courseCount.toLocaleString()} US courses in the seed
           </p>
         </div>
 
