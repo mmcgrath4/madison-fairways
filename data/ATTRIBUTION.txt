@@ -1,0 +1,8 @@
+Contains data from OpenGolfAPI (opengolfapi.org)
+
+Course catalog in courses.json is derived from the OpenGolfAPI US dataset
+(https://github.com/opengolfapi/data), licensed under ODbL 1.0 — the same
+license as OpenStreetMap.
+
+Share-alike: keep this derived database open under ODbL if you redistribute it.
+Upstream sources include OpenStreetMap contributors.

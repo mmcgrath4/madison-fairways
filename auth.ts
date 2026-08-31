@@ -1,0 +1,20 @@
+import NextAuth from "next-auth";
+import Google from "next-auth/providers/google";
+
+export const { handlers, auth, signIn, signOut } = NextAuth({
+  trustHost: true,
+  secret: process.env.AUTH_SECRET ?? "madison-fairways-build-placeholder",
+  providers: [Google],
+  session: { strategy: "jwt" },
+  pages: {
+    signIn: "/signin",
+  },
+  callbacks: {
+    session({ session, token }) {
+      if (session.user && token.sub) {
+        session.user.id = token.sub;
+      }
+      return session;
+    },
+  },
+});
