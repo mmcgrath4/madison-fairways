@@ -1,5 +1,7 @@
 # Madison Fairways
 
+**Live demo:** https://madison-fairways-demo.vercel.app
+
 Beli for golf — rank US courses you have played, not 5-star ratings.
 
 Madison Fairways is a public web app for golfers who want an ordered list of **courses they have actually played**, built the way [Beli](https://www.beliapp.com/) ranks restaurants: pairwise comparison, not stars, not Yelp scores. The GitHub repo name is historical; the product is **United States**, not Madison-only.
